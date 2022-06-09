@@ -1,3 +1,6 @@
+//Jose Velazquez
+//BinaryConverter
+
 #include "binary.h"
 
 int main()

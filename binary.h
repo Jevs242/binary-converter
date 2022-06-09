@@ -1,3 +1,6 @@
+//Jose Velazquez
+//BinaryConverter
+
 #pragma once
 #include <iostream>
 #include <string>
