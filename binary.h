@@ -6,6 +6,11 @@
 #include <string>
 #include <math.h>
 #include <vector>
+#ifdef _WIN32
+#include <windows.h>
+#else
+#include <unistd.h>
+#endif
 
 class Program
 {
