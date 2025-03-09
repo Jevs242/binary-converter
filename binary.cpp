@@ -10,6 +10,24 @@ int main()
 	return 0;
 }
 
+void ClearScreen() {
+#ifdef _WIN32
+    system("cls");
+#else
+    system("clear");
+#endif
+}
+
+void Pause() {
+#ifdef _WIN32
+    system("pause");
+#else
+    std::cout << "Press Enter to continue...";
+    std::cin.ignore();
+    std::cin.get();
+#endif
+}
+
 void Program::menu()
 { 
 	int opc{0};
@@ -32,7 +50,7 @@ void Program::menu()
 		return;
 	default:
 		error("Error : 1 , 2 , 3 , 4 or 5");
-		system("cls");
+		ClearScreen();
 		menu();
 		break;
 	}
@@ -46,7 +64,7 @@ void Program::end()
 	switch (std::toupper(inputEnd))
 	{
 	case 'Y':
-		system("cls");
+		ClearScreen();
 		menu();
 		break;
 	case 'N':
@@ -70,10 +88,10 @@ void Program::message(std::string message, std::string num1, std::string num2)
 
 void Program::error(std::string message)
 {
-	system("cls");
+	ClearScreen();
 	std::cout << message << std::endl;
-	system("pause");
-	system("cls");
+	Pause();
+	ClearScreen();
 }
 
 int Program::valid()
@@ -128,7 +146,7 @@ void Program::validBinary(std::string binary , int opc)
 
 void Program::numberToBinary()
 {
-	system("cls");
+	ClearScreen();
 	int inputnumber;
 	std::cout << ("What number you want to convert to binary number : ");
 	inputnumber = valid();
