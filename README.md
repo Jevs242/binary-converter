@@ -8,16 +8,16 @@ Before you begin, ensure you have `g++` installed on your system to compile the 
 
 ## Compiling the Program
 
-To compile the binary converter program, open a terminal in the directory containing `tictactoe.cpp` and execute the following command:
+To compile the binary converter program, open a terminal in the directory containing `binary.cpp` and execute the following command:
 
 ```bash
-g++ -o binary-converter binary-converter.cpp
+g++ -o binary binary.cpp
 ```
 
 ## Running the program
 
 After compiling the program, you can run it by executing:
 ```bash
-./binary-converter
+./binary
 ```
 
